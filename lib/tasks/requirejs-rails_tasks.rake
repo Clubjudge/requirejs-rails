@@ -145,7 +145,6 @@ EOM
   end
 end
 
-task "assets:precompile" => ["requirejs:precompile:external"]
 if ARGV[0] == "requirejs:precompile:all"
   task "assets:environment" => ["requirejs:precompile:disable_js_compressor"]
 end
