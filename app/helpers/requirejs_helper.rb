@@ -98,7 +98,7 @@ module RequirejsHelper
   def baseUrl(js_asset)
     js_asset_path = javascript_path(js_asset)
     uri = URI.parse(js_asset_path)
-    asset_host = Rails.application.config.action_controller.asset_host
+    asset_host = uri.host && js_asset_path.sub(uri.request_uri, '')
     [asset_host, Rails.application.config.assets.prefix].join
   end
 end
