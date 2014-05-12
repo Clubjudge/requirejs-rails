@@ -145,5 +145,3 @@ OS X Homebrew users can use 'brew install node'.
     invoke_or_reboot_rake_task "requirejs:precompile:all"
   end
 end
-
-task "assets:precompile" => ["requirejs:precompile:external"]
